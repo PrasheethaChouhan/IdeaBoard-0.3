@@ -37,7 +37,6 @@ function draw(e) {
   ctx.lineTo(pos.x, pos.y); // to position
 
   ctx.stroke(); // draw it!
-  
 }
 
 function eraser() {
@@ -53,6 +52,9 @@ function clear_can() {
 }
 
 
+                
+
+
 // add window event listener to trigger when window is resized
 window.addEventListener("resize", resize);
 
@@ -60,6 +62,7 @@ window.addEventListener("resize", resize);
 document.addEventListener("mousemove", draw);
 document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
+document.getElementById('pen').addEventListener('mousemove', draw);
 
  document.getElementById('colorpicker').addEventListener('change', function() {
   currentColor = this.value;
@@ -81,3 +84,4 @@ document.getElementById('mySelect').addEventListener('change', function() {
   console.log(currentSize);
 
 });
+
